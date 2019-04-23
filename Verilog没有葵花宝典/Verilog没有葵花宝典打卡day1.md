@@ -1,5 +1,7 @@
 # Verilog没有葵花宝典打卡day1
 
+[TOC]
+
 #### 1. bit, byte, word, dword, qword的区别
 
 1byte = 8bit
@@ -119,3 +121,4 @@ endmodule
 <https://www.embedded.com/print/4015117>
 
 <https://patents.google.com/patent/CN101930350A/zh>
+
