@@ -40,15 +40,23 @@ Timing constraints include: setup time, hold time, recovery time, and minimum pu
 
 p18
 
+Power dissipation is dependent upon the power-supply voltage, frequency of operation, internal capacitance, and output load
 
+![PowerCal](https://wx4.sinaimg.cn/large/006C4SD7ly1g2dux8lflij30es028mx1.jpg)
 
 #### 4. 阅读文档Delay calculation的描述
+
+![Delay Calculation](https://ws2.sinaimg.cn/large/006C4SD7ly1g2duwafrxxj30ge03gt8l.jpg)
 
 p14
 
 #### 5. 提供了哪些类型的cell？
 
+包含的特殊标准单元有，Antenna-Fix Cell、NWELL and Substrate Tie Cell、Fill Cells、Low-Power (XL) Cells、TIEHI/LO Cells、Delay Cells
 
+主要包含的基础基本标准单元有
+
+全加器、与门、与或门、BUF、D触发器、延迟、反相器、选择器、与非门、或非门、三态门、异或门、同或门等等。
 
 #### 6. Verilog文件中包含了哪些信息？
 
