@@ -64,6 +64,8 @@ smic18m.v不支持negative timing检查，模拟仿真时间比smic18m_neg.v短
 
 smic18m_neg.v 支持negative timing检查，模拟仿真时间比smic18m_neg.v短
 
+延时参数，针对不同的输入激励，延时参数不同
+
 #### Question
 
 ##### Q1. smic180工艺库是什么？
