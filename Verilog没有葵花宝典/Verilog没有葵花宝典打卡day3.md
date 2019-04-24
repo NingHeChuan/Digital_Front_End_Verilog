@@ -10,8 +10,6 @@
 
 #### 2. 阅读文档transition time, propagation delay等参数的定义
 
-p13
-
 ![Propagation Delay](https://wx2.sinaimg.cn/large/006C4SD7ly1g2dtqwlevcj30h506r747.jpg)
 
 Transition Time（转换时间）：输入和输出信号，上升时间：从10%Vdd上升到90%Vdd的时间，下降时间L从90%Vdd下降到10%Vdd的时间。上升时间和下降时间统称为Transition Time。
@@ -47,8 +45,6 @@ Power dissipation功率损耗取决于电源电压、工作频率、内部电容
 #### 4. 阅读文档Delay calculation的描述
 
 ![Delay Calculation](https://ws2.sinaimg.cn/large/006C4SD7ly1g2duwafrxxj30ge03gt8l.jpg)
-
-p14
 
 #### 5. 提供了哪些类型的cell？
 
