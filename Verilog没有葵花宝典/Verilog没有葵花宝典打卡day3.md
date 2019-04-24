@@ -22,17 +22,27 @@ Timing constraints include: setup time, hold time, recovery time, and minimum pu
 
 ![setuptime](https://ws1.sinaimg.cn/large/006C4SD7ly1g2dueh40enj30gq06igli.jpg)
 
+在时钟沿来临前，输入信号的变化超过50%Vdd的时间到时钟变化超过50%Vdd的时间中，输入信号保持稳定的最小时间。
+
 
 
 ![holdtime](https://wx1.sinaimg.cn/large/006C4SD7ly1g2dueh1ke7j30gm06ia9y.jpg)
 
+在时钟沿来临后，输入信号的变化超过50%Vdd的时间到时钟变化超过50%Vdd的时间中，输入信号保持稳定的最小时间。
+
 ![recoverytime](https://ws2.sinaimg.cn/large/006C4SD7ly1g2dujj00dyj30gu06mmx3.jpg)
+
+复位或者置位信号变化超过50%Vdd的时间到时钟变化超过50%Vdd的时间中，时钟沿来临的前最小时间，保证复位或置位完成。
 
 ![removaltime](https://ws1.sinaimg.cn/large/006C4SD7ly1g2dukpivylj30gl06umx3.jpg)
 
+复位或者置位信号变化超过50%Vdd的时间到时钟变化超过50%Vdd的时间中，时钟沿来临的后最小时间，保证置位或复位完成。
+
 ![minimunpulsewidth](https://wx2.sinaimg.cn/large/006C4SD7ly1g2dum328vij30go05xdfr.jpg)
 
+最小脉冲宽度就是信号上升沿变化超过50%Vdd到下降沿变化低于50%Vdd时，测量高电平的最小脉冲宽度，低电平最小宽度同理。
 
+个人认为不能保证各个时间参数，可能会产生亚稳态。
 
 #### 3. 阅读文档Power Dissipation/Calculation的描述
 
@@ -89,8 +99,6 @@ The SAGE-X Standard Cell Library may contain negative propagation delays. Althou
 - Output load比较小
 
 https://mp.weixin.qq.com/s/WC2oCIrVo-Sqtx4HKp8mXw
-
-
 
 ##### Q3：Derating factors？
 
