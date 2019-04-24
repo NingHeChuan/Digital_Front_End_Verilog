@@ -6,7 +6,7 @@
 
 #### 1. 了解目录结构：与前端相关的比如文档(doc)，仿真模型(verilog/vhdl)，标准单元库(synopsys/symbols)
 
-
+![某180工艺库](https://ws3.sinaimg.cn/large/006C4SD7ly1g2dzfgabvyj30ri0oq766.jpg)
 
 #### 2. 阅读文档transition time, propagation delay等参数的定义
 
@@ -40,11 +40,13 @@ Power dissipation功率损耗取决于电源电压、工作频率、内部电容
 
 ![PowerCal](https://wx4.sinaimg.cn/large/006C4SD7ly1g2dux8lflij30es028mx1.jpg)
 
-某工艺库文档有个参数详细说明
+某工艺库文档有个参数详细说明，并提供参考计算示例
 
 #### 4. 阅读文档Delay calculation的描述
 
 ![Delay Calculation](https://ws2.sinaimg.cn/large/006C4SD7ly1g2duwafrxxj30ge03gt8l.jpg)
+
+某工艺库文档有个参数详细说明，并提供参考计算示例
 
 #### 5. 提供了哪些类型的cell？
 
@@ -72,7 +74,22 @@ Semiconductor Manufactory International Corporation 中芯国际
 
 ##### Q2：negative propagation delays是什么？negative timing
 
+The SAGE-X Standard Cell Library may contain negative propagation delays. Although most third-party verification tools can handle negative propagation delays, some tools will turn negative delays into a zero value.
+
+实际上cell delay是存在负delay的情况。而且从propagation delay的定义可以看出，当output的transition足够快，完全可能出现output 50% 电平提前于input50%电平，即发生负的delay情况
+
+出现负的net delay情况如下：
+
+- Drive的驱动能力够大
+
+- Input transition足够小
+
+- Output load比较小
+
+https://mp.weixin.qq.com/s/WC2oCIrVo-Sqtx4HKp8mXw
+
 
 
 ##### Q3：Derating factors？
 
+derating factors for variations in process case, temperature, and voltage.电压、温度、和process case
