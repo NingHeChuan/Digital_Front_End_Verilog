@@ -38,11 +38,11 @@ Timing constraints include: setup time, hold time, recovery time, and minimum pu
 
 #### 3. 阅读文档Power Dissipation/Calculation的描述
 
-p18
-
-Power dissipation is dependent upon the power-supply voltage, frequency of operation, internal capacitance, and output load
+Power dissipation功率损耗取决于电源电压、工作频率、内部电容和输出负载，计算公式
 
 ![PowerCal](https://wx4.sinaimg.cn/large/006C4SD7ly1g2dux8lflij30es028mx1.jpg)
+
+某工艺库文档有个参数详细说明
 
 #### 4. 阅读文档Delay calculation的描述
 
@@ -60,7 +60,11 @@ p14
 
 #### 6. Verilog文件中包含了哪些信息？
 
+Verilog文件中为文当中所涉及到的基本标准单元库的代码。
 
+smic18m.v不支持negative timing检查，模拟仿真时间比smic18m_neg.v短
+
+smic18m_neg.v 支持negative timing检查，模拟仿真时间比smic18m_neg.v短
 
 #### Question
 
@@ -70,7 +74,7 @@ Semiconductor Manufactory International Corporation 中芯国际
 
 180指180nm，中芯国际180nm工艺库。
 
-##### Q2：negative propagation delays是什么？
+##### Q2：negative propagation delays是什么？negative timing
 
 
 
