@@ -6,7 +6,7 @@
 
 #### 1. 了解目录结构：与前端相关的比如文档(doc)，仿真模型(verilog/vhdl)，标准单元库(synopsys/symbols)
 
-![某180工艺库](https://ws3.sinaimg.cn/large/006C4SD7ly1g2dzfgabvyj30ri0oq766.jpg)
+![某工艺库](https://ws3.sinaimg.cn/large/006C4SD7ly1g2dzfgabvyj30ri0oq766.jpg)
 
 #### 2. 阅读文档transition time, propagation delay等参数的定义
 
@@ -70,19 +70,13 @@ Power dissipation功率损耗取决于电源电压、工作频率、内部电容
 
 Verilog文件中为文当中所涉及到的基本标准单元库的代码。
 
-smic18m.v不支持negative timing检查，模拟仿真时间比smic18m_neg.v短
+xxx.v不支持negative timing检查，模拟仿真时间比xxx_neg.v短
 
-smic18m_neg.v 支持negative timing检查，模拟仿真时间比smic18m_neg.v短
+xxx_neg.v 支持negative timing检查，模拟仿真时间比xxx_neg.v短
 
 延时参数，针对不同的输入激励，延时参数不同
 
 #### Question
-
-##### Q1. smic180工艺库是什么？
-
-Semiconductor Manufactory International Corporation 中芯国际
-
-180指180nm，中芯国际180nm工艺库。
 
 ##### Q2：negative propagation delays是什么？negative timing
 
