@@ -55,18 +55,11 @@ endmodule
 
 #### 3. 输入一个8bit数，输出其中1的个数。如果只能使用1bit全加器，最少需要几个？
 
-```verilog
-module Detect_One(
-    input       [7:0]   indata,
-    output        [2:0]   dout
-    );
-
-assign  dout = ((indata[7] + indata[6]) + (indata[5] + indata[4])) + ((indata[3] + indata[2]) +  (indata[1] + indata[0]));
-
-endmodule
-```
-
 12个1bit全加器
+
+![cal_fa](https://wx4.sinaimg.cn/large/006C4SD7ly1g2f6yjzqwuj32zv1y4b2a.jpg)
+
+<https://forum.allaboutcircuits.com/threads/count-number-of-logic-1s-in-7-bit-number.49821/>
 
 #### 4. 如果一个标准单元库只有三个cell：2输入mux(o = s ？a ：b;)，TIEH(输出常数1)，TIEL(输出常数0)，如何实现以下功能？
 
