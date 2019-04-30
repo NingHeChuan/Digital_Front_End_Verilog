@@ -147,7 +147,7 @@ end
 always @(*)begin
   case(mode)
   2'b00: data_o = data_r0;
-  2'b01: data_o = data_r1;
+  2'b01: data_o = {data_o[3:1], data_r1};
   2'b10: data_o = data_r2;
   2'b11: data_o = data_r3;
   endcase
