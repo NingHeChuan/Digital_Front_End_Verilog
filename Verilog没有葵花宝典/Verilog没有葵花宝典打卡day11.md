@@ -47,5 +47,3 @@ vcs ../rtl/debounce.v TB_debounce.v -debug_all -top TB_debounce -R -gui
 
 感谢星友康健提供的模板，每次使用只需要稍微修改文件名即可。对于Linux的使用我还不是很熟悉，后面抽时间学习一下Linux的结构和基本命令。
 
-
-
