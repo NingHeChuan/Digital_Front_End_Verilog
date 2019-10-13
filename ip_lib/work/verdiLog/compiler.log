@@ -1,0 +1,12 @@
+*design* DebussyLib (btIdent Verdi3_K-2015.09-SP1-1)
+Command arguments:
+    +define+verilog
+    -f /home/IC/ic_study/ip_lib/vc/complex_mult.f
+        ../sim/tb_complex_mult.v
+        ../rtl/complex_mult.v
+        ../rtl/signed_mult.v
+
+Highest level modules:
+tb_complex_mult
+
+Total	0 error(s),   0 warning(s)
