@@ -7,7 +7,7 @@ module complex_mult(/*autoarg*/
    );
 
 parameter   DINA_WIDTH = 0;
-parameter   DINB_WIDTH = 0;
+parameter   DINB_WIDTH = 0; 
 
 localparam  SUMA_WIDTH = DINA_WIDTH + 1'b1;
 localparam  SUMB_WIDTH = DINB_WIDTH + 1'b1;
