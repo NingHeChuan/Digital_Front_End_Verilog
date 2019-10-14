@@ -1,5 +1,5 @@
 psSimBaseName                      	simv
-pDaiDir                            	/home/IC/ic_study/ip_lib/work/simv.daidir
+pDaiDir                            	/home/IC/Digital_Front_End_Verilog/ip_lib/work/simv.daidir
 destPath                           	csrc/
 hsMainFileCount                    	0
 hsMainFileName                     	dummy
