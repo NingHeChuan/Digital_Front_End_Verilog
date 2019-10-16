@@ -2,7 +2,7 @@ module tb_complex_mult;
 
 parameter   DINA_WIDTH = 8;
 parameter   DINB_WIDTH = 8;
-parameter   MULT_WIDTH = DINA_WIDTH + DINB_WIDTH+2;
+parameter   MULT_WIDTH = DINA_WIDTH + DINB_WIDTH+1;
 
 reg   signed  [DINA_WIDTH - 1:0]  dina_i;
 reg   signed  [DINA_WIDTH - 1:0]  dina_q;
