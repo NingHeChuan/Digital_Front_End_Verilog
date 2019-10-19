@@ -1,3 +1,23 @@
+// *********************************************************************************
+// Project Name :       
+// Author       : NingHeChuan
+// Email        : ninghechuan@foxmail.com
+// Blogs        : http://www.ninghechuan.com/
+// File Name    : .v
+// Module Name  :
+// Called By    :
+// Abstract     :
+//
+// CopyRight(c) 2019, NingHeChuan Studio.. 
+// All Rights Reserved
+//
+// *********************************************************************************
+// Modification History:
+// Date         By              Version                 Change Description
+// -----------------------------------------------------------------------
+// 2019/10/19    NingHeChuan       1.0                     Original
+//  
+// *********************************************************************************
 module signed_mult(/*autoarg*/
    // Outputs
    product,
