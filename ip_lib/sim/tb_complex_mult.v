@@ -38,24 +38,25 @@ integer i;
 integer j;
 
 initial begin
-  for(i = 4; i <= 15; i= i+1)begin
-    for(j = 4; j <= 15; j = j+1)begin
-        dina_i = $signed(i);
-        dina_q = $signed(j);
-        dinb_i = $signed(j);
-        dinb_q = $signed(i);
-        #50;
-      if ((((dina_i * dinb_i) - (dina_q * dinb_q)) != mult_i)  &&
-          (((dina_i * dinb_q) + (dina_q * dinb_i)) != mult_q) ) begin
-      $display("***ERROR at time = %0d ***", $time);
-      $display("dina_i =%d, dina_q =%d, dinb_i =%d, dinb_q =%d, mult_i =%d, mult_q =%d",
+    for(i = 4; i <= 15; i= i+1)begin
+        for(j = 4; j <= 15; j = j+1)begin
+            dina_i = $signed(i);
+            dina_q = $signed(j);
+            dinb_i = $signed(j);
+            dinb_q = $signed(i);
+            #50;
+        if ((mult_i !== ((dina_i * dinb_i) - (dina_q * dinb_q)))  ||
+            (mult_q !== ((dina_i * dinb_q) + (dina_q * dinb_i))) ) begin
+        $display("***ERROR at time = %0d ***", $time);
+        $display("dina_i =%d, dina_q =%d, dinb_i =%d, dinb_q =%d, mult_i =%d, mult_q =%d",
                dina_i, dina_q, dinb_i, dinb_q, mult_i, mult_q);
-
-       $stop;
-       end
-       end
-    #50;
+    
+        $stop;
+        end
+        #50;
+        end
     end
+    
     $display("****** Testbench Successfully completed!  ****** ");
                                                                
     $display("***   ######      ###       #####    #####   *** ");
