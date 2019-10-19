@@ -56,7 +56,15 @@ initial begin
        end
     #50;
     end
-    $display("*** Testbench Successfully completed! ***");
+    $display("****** Testbench Successfully completed!  ****** ");
+                                                               
+    $display("***   ######      ###       #####    #####   *** ");
+    $display("***  #      #   ##   ##    #        #        *** ");  
+    $display("***  #      #   #     #    #        #        *** ");
+    $display("***  ########   #######     #####    #####   *** ");
+    $display("***  #          #     #          #        #  *** ");
+    $display("***  #          #     #          #        #  *** ");
+    $display("***  #          #     #     #####    #####   *** ");
     $finish;
 end
 
