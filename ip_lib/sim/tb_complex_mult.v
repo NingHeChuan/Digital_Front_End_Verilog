@@ -45,8 +45,8 @@ initial begin
             dinb_i = $signed(j);
             dinb_q = $signed(i);
             #50;
-        if ((mult_i !== ((dina_i * dinb_i) - (dina_q * dinb_q)))  ||
-            (mult_q !== ((dina_i * dinb_q) + (dina_q * dinb_i))) ) begin
+        if ((mult_i != ((dina_i * dinb_i) - (dina_q * dinb_q)))  ||
+            (mult_q != ((dina_i * dinb_q) + (dina_q * dinb_i))) ) begin
         $display("***ERROR at time = %0d ***", $time);
         $display("dina_i =%d, dina_q =%d, dinb_i =%d, dinb_q =%d, mult_i =%d, mult_q =%d",
                dina_i, dina_q, dinb_i, dinb_q, mult_i, mult_q);
