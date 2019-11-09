@@ -35,6 +35,11 @@ always @(*)begin
 end
 
 
+
+endmodule
+
+module signed_cmp;
+
 function    [4:0] max_op;
 input   [4:0]   dat_op0;
 input   [4:0]   dat_op1;
@@ -59,5 +64,4 @@ function [4:0] dat_abs;
 
 endfunction
 
-
-endmodule 
+endmodule

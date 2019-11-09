@@ -64,38 +64,74 @@ assign suba[SUBA_WIDTH - 1:0] = dina_i - dina_q;
 signed_mult
 #(
                            .A_WIDTH             (DINA_WIDTH),
-                           .B_WIDTH             (SUMB_WIDTH)
-                         )
-u0_signed_mult(/*autoinst*/
-                           // Outputs
-                           .product             (product_a[PRODUCT_A_WIDTH-1:0]),
-                           // Inputs
-                           .multa               (dina_i[DINA_WIDTH-1:0]),
-                           .multb               (sumb[SUMB_WIDTH-1:0]));
-
-signed_mult 
-#(
-                           .A_WIDTH             (DINB_WIDTH),
-                           .B_WIDTH             (SUMA_WIDTH)
-                         )
-u1_signed_mult(/*autoinst*/
-                           // Outputs
-                           .product             (product_b[PRODUCT_B_WIDTH-1:0]),
-                           // Inputs
-                           .multa               (dinb_q[DINB_WIDTH-1:0]),
-                           .multb               (suma[SUMA_WIDTH-1:0]));
+                           .B_WIDTH             (SUMB_WIDTH))
+u_sign_mult_0(/*autoinst*/
+            // Outputs
+            .product                    (product_a[PRODUCT_A_WIDTH-1:0]),
+            // Inputs
+            .tc                         (1'd1),
+            .dat_a                      (dina_i[DINA_WIDTH-1:0]),
+            .dat_b                      (sumb[SUMB_WIDTH-1:0]));
 
 signed_mult
 #(
                            .A_WIDTH             (DINB_WIDTH),
-                           .B_WIDTH             (SUBA_WIDTH)
-                         )
-u2_signed_mult(/*autoinst*/
-                           // Outputs
-                           .product             (product_c[PRODUCT_C_WIDTH-1:0]),
-                           // Inputs
-                           .multa               (dinb_i[DINB_WIDTH-1:0]),
-                           .multb               (suba[SUBA_WIDTH-1:0]));
+                           .B_WIDTH             (SUMA_WIDTH))
+u_sign_mult_1(/*autoinst*/
+            // Outputs
+            .product                    (product_b[PRODUCT_B_WIDTH-1:0]),
+            // Inputs
+            .tc                         (1'd1),
+            .dat_a                      (dinb_q[DINB_WIDTH-1:0]),
+            .dat_b                      (suma[SUMA_WIDTH-1:0]));
+signed_mult
+#(
+                           .A_WIDTH             (DINB_WIDTH),
+                           .B_WIDTH             (SUMB_WIDTH))
+u_sign_mult_2(/*autoinst*/
+            // Outputs
+            .product                    (product_c[PRODUCT_C_WIDTH-1:0]),
+            // Inputs
+            .tc                         (1'd1),
+            .dat_a                      (dinb_i[DINB_WIDTH-1:0]),
+            .dat_b                      (suba[SUMB_WIDTH-1:0]));
+
+
+//signed_mult
+//#(
+//                           .A_WIDTH             (DINA_WIDTH),
+//                           .B_WIDTH             (SUMB_WIDTH)
+//                         )
+//u0_signed_mult(/*autoinst*/
+//                           // Outputs
+//                           .product             (product_a[PRODUCT_A_WIDTH-1:0]),
+//                           // Inputs
+//                           .multa               (dina_i[DINA_WIDTH-1:0]),
+//                           .multb               (sumb[SUMB_WIDTH-1:0]));
+//
+//signed_mult 
+//#(
+//                           .A_WIDTH             (DINB_WIDTH),
+//                           .B_WIDTH             (SUMA_WIDTH)
+//                         )
+//u1_signed_mult(/*autoinst*/
+//                           // Outputs
+//                           .product             (product_b[PRODUCT_B_WIDTH-1:0]),
+//                           // Inputs
+//                           .multa               (dinb_q[DINB_WIDTH-1:0]),
+//                           .multb               (suma[SUMA_WIDTH-1:0]));
+//
+//signed_mult
+//#(
+//                           .A_WIDTH             (DINB_WIDTH),
+//                           .B_WIDTH             (SUBA_WIDTH)
+//                         )
+//u2_signed_mult(/*autoinst*/
+//                           // Outputs
+//                           .product             (product_c[PRODUCT_C_WIDTH-1:0]),
+//                           // Inputs
+//                           .multa               (dinb_i[DINB_WIDTH-1:0]),
+//                           .multb               (suba[SUBA_WIDTH-1:0]));
 
 assign mult_i[MULT_WIDTH-1:0] = product_a - product_b;
 assign mult_q[MULT_WIDTH-1:0] = product_a - product_c;
