@@ -1,3 +1,3 @@
-Command Line: /opt/Synopsys/Verdi2015/platform/LINUXAMD64/bin/vfast -silent -del . -o /home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb -ft verilog /home/IC/ic_study/ip_lib/work/tb_complex_mult.dump
+Command Line: /opt/Synopsys/Verdi2015/platform/LINUXAMD64/bin/vfast -silent -del . -o /home/IC/Digital_Front_End_Verilog/ip_lib/work/tb_ram.dump.fsdb -ft verilog /home/IC/Digital_Front_End_Verilog/ip_lib/work/tb_ram.dump
 uname(Linux IC 2.6.32-573.el6.x86_64 #1 SMP Wed Jul 1 18:23:37 EDT 2015 x86_64)
-au time 0.015811 0.003999 0.005999 delta 10121216 10121216 total 71716864 71716864
+au time 0.023810 0.003999 0.002999 delta 10121216 10121216 total 71716864 71716864

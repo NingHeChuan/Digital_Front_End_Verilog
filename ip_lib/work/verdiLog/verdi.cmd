@@ -1,628 +1,307 @@
 verdiDockWidgetDisplay -dock widgetDock_WelcomePage
-verdiWindowResize -win $_Verdi_1 -2 "25" "1366" "692"
+verdiWindowResize -win $_Verdi_1 -2 "25" "1920" "1004"
+verdiSetPrefEnv -bDisplayWelcome "off"
 verdiDockWidgetHide -dock widgetDock_WelcomePage
-verdiWindowResize -win $_Verdi_1 -2 "25" "1366" "692"
-debImport "-f" "/home/IC/ic_study/ip_lib/vc/complex_mult.f" -path \
-          {/home/IC/ic_study/ip_lib/vc}
-debReload
-srcHBSelect "tb_complex_mult" -win $_nTrace1
-srcSetScope -win $_nTrace1 "tb_complex_mult" -delim "."
-simSetDumpUnfinshTrans off
-simSetInteractiveFsdbFile inter.fsdb
-simSetSimMode on
-srcSetPreference -font "Courier 14"
+verdiWindowResize -win $_Verdi_1 -2 "25" "1920" "1004"
+debImport "-f" "/home/IC/Digital_Front_End_Verilog/ip_lib/vc/ram.f" -path \
+          {/home/IC/Digital_Front_End_Verilog/ip_lib/vc}
 wvCreateWindow
-verdiWindowBeWindow -win $_nWave3
-wvResizeWindow -win $_nWave3 0 28 1362 182
-wvResizeWindow -win $_nWave3 -2 25 1366 692
-wvConvertFile -win $_nWave3 -o \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb" \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump"
-wvSetPosition -win $_nWave3 {("G1" 0)}
-wvOpenFile -win $_nWave3 \
-           {/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb}
-srcHBSelect "tb_complex_mult.u_complex_mult" -win $_nTrace1
-srcSetScope -win $_nTrace1 "tb_complex_mult.u_complex_mult" -delim "."
+verdiDockWidgetMaximize -dock windowDock_nWave_2
+verdiDockWidgetRestore -dock windowDock_nWave_2
+verdiDockWidgetMaximize -dock windowDock_nWave_2
+wvConvertFile -win $_nWave2 -o \
+           "/home/IC/Digital_Front_End_Verilog/ip_lib/work/tb_ram.dump.fsdb" \
+           "/home/IC/Digital_Front_End_Verilog/ip_lib/work/tb_ram.dump"
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvOpenFile -win $_nWave2 \
+           {/home/IC/Digital_Front_End_Verilog/ip_lib/work/tb_ram.dump.fsdb}
+verdiWindowBeWindow -win $_nWave2
+wvResizeWindow -win $_nWave2 0 28 1916 182
+wvResizeWindow -win $_nWave2 -2 25 1920 1004
+srcHBSelect "tb_ram.u_sram" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_ram.u_sram" -delim "."
 srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {41 44 3 1 1 1} -backward
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {41 44 3 1 1 1} -backward
+srcSelect -win $_nTrace1 -range {10 17 1 1 1 1} -backward
 srcAddSelectedToWave -win $_nTrace1
-wvSetCursor -win $_nWave3 167.720170 -snap {("G1" 5)}
-wvSelectSignal -win $_nWave3 {( "G1" 3 )} 
-wvResizeWindow -win $_nWave3 0 25 1366 692
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvResizeWindow -win $_nWave2 -2 25 1920 1004
+wvSetCursor -win $_nWave2 444.120144 -snap {("G1" 3)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G1" 6 )} 
+wvSetCursor -win $_nWave2 2061.019856 -snap {("G1" 2)}
+wvSetCursor -win $_nWave2 1010.303851 -snap {("G1" 4)}
+wvSetCursor -win $_nWave2 1576.074007 -snap {("G1" 5)}
+wvSetCursor -win $_nWave2 2343.904934 -snap {("G1" 5)}
+wvSetCursor -win $_nWave2 3885.339952 -snap {("G1" 5)}
+wvSetCursor -win $_nWave2 3059.777377 -snap {("G1" 3)}
+wvSetCursor -win $_nWave2 1778.134777 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 3625.547533 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 5149.663057 -snap {("G2" 0)}
+wvSetCursor -win $_nWave2 4526.161252 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 3377.301444 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 1962.876053 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 2291.946450 -snap {("G1" 5)}
+wvSetCursor -win $_nWave2 1512.569194 -snap {("G1" 5)}
+wvSetCursor -win $_nWave2 2378.543923 -snap {("G1" 5)}
+wvSetCursor -win $_nWave2 2759.572804 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 1662.671480 -snap {("G1" 4)}
+wvSetCursor -win $_nWave2 2898.128761 -snap {("G1" 4)}
+wvSetCursor -win $_nWave2 5773.164862 -snap {("G1" 5)}
+srcHBSelect "tb_ram.u_dp_sram" -win $_nTrace1
+srcHBSelect "tb_ram.u_dp_sram" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_ram.u_dp_sram" -delim "."
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {8 21 1 1 1 1} -backward
 srcDeselectAll -win $_nTrace1
 srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "SUMA_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "suba\[SUBA_WIDTH - 1:0\]" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "SUBA_WIDTH" -win $_nTrace1
-srcTraceDriver "tb_complex_mult.u_complex_mult.SUBA_WIDTH" -win $_nTrace1
-nsMsgSwitchTab -tab trace
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "SUBA_WIDTH" -win $_nTrace1
-srcAction -pos 42 2 8 -win $_nTrace1 -name "suba\[SUBA_WIDTH - 1:0\]" -ctrlKey \
-          off
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "SUBA_WIDTH" -win $_nTrace1
-srcAction -pos 42 2 10 -win $_nTrace1 -name "suba\[SUBA_WIDTH - 1:0\]" -ctrlKey \
-          off
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "SUBA_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "product_b" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcHBSelect "tb_complex_mult.u_complex_mult.u0_signed_mult" -win $_nTrace1
-srcHBSelect "tb_complex_mult.u_complex_mult" -win $_nTrace1
-srcHBSelect "tb_complex_mult.u_complex_mult" -win $_nTrace1
-srcHBSelect "tb_complex_mult" -win $_nTrace1
-srcSetScope -win $_nTrace1 "tb_complex_mult" -delim "."
-wvDisplayGridCount -win $_nWave3 -off
-wvGetSignalClose -win $_nWave3
-wvConvertFile -win $_nWave3 -o \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb" \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump"
-wvReloadFile -win $_nWave3
-wvUnknownSaveResult -win $_nWave3 -clear
-wvSelectSignal -win $_nWave3 {( "G1" 2 )} 
-wvSelectSignal -win $_nWave3 {( "G1" 1 )} 
-wvSelectGroup -win $_nWave3 {G2}
-srcDeselectAll -win $_nTrace1
-debReload
-srcHBSelect "tb_complex_mult.u_complex_mult" -win $_nTrace1
-srcSetScope -win $_nTrace1 "tb_complex_mult.u_complex_mult" -delim "."
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-debReload
-wvSetCursor -win $_nWave3 223.545656 -snap {("G2" 0)}
-wvDisplayGridCount -win $_nWave3 -off
-wvGetSignalClose -win $_nWave3
-wvConvertFile -win $_nWave3 -o \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb" \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump"
-wvReloadFile -win $_nWave3
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {12 21 3 1 6 1} -backward
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "PRODUCT_A_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {23 29 1 1 1 1} -backward
+srcSelect -win $_nTrace1 -range {11 21 1 1 1 1} -backward
 srcAddSelectedToWave -win $_nTrace1
+wvSelectGroup -win $_nWave2 {G2}
+wvSelectGroup -win $_nWave2 {G2}
+wvSelectSignal -win $_nWave2 {( "G1" 7 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 8 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 8 9 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 8 9 10 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 8 9 10 11 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 8 9 10 11 12 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 8 9 10 11 12 13 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 8 9 10 11 12 13 14 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 9 10 11 12 13 14 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 9 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 8 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 8 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 8 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 8 9 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 8 9 10 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 8 9 10 11 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 8 9 10 11 12 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 8 9 10 11 12 13 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 8 9 10 11 12 13 14 )} 
+wvSetPosition -win $_nWave2 {("G1" 10)}
+wvSetPosition -win $_nWave2 {("G1" 12)}
+wvSetPosition -win $_nWave2 {("G1" 13)}
+wvSetPosition -win $_nWave2 {("G1" 14)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 8)}
+wvSetPosition -win $_nWave2 {("G2" 8)}
+wvSetCursor -win $_nWave2 1310.508424 -snap {("G2" 3)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSetCursor -win $_nWave2 1212.364621 -snap {("G2" 3)}
+wvSelectSignal -win $_nWave2 {( "G2" 3 )} 
+wvSetCursor -win $_nWave2 2395.863418 -snap {("G1" 5)}
+wvSetCursor -win $_nWave2 288.658243 -snap {("G2" 4)}
+wvSetCursor -win $_nWave2 127.009627 -snap {("G2" 5)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSetCursor -win $_nWave2 184.741276 -snap {("G2" 8)}
 srcDeselectAll -win $_nTrace1
+srcHBSelect "tb_ram.u_ture_dp_sram" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_ram.u_ture_dp_sram" -delim "."
 srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {33 44 1 1 1 1} -backward
+srcSelect -win $_nTrace1 -range {10 25 1 1 1 1} -backward
+wvSelectGroup -win $_nWave2 {G3}
+wvSelectSignal -win $_nWave2 {( "G2" 8 )} 
+wvSelectGroup -win $_nWave2 {G3}
+wvSelectSignal -win $_nWave2 {( "G2" 8 )} 
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G3" 1)}
+wvSetPosition -win $_nWave2 {("G3" 1)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G2" 7)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 7)}
+wvSetPosition -win $_nWave2 {("G2" 8)}
+wvSelectGroup -win $_nWave2 {G3}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G4" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G4" 0)}
+wvSetPosition -win $_nWave2 {("G2" 8)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 8)}
 srcAddSelectedToWave -win $_nTrace1
-wvResizeWindow -win $_nWave3 0 25 1366 692
-wvSelectSignal -win $_nWave3 {( "G1" 1 )} 
-wvCut -win $_nWave3
-wvSetPosition -win $_nWave3 {("G3" 0)}
-wvSetPosition -win $_nWave3 {("G2" 16)}
-wvSelectSignal -win $_nWave3 {( "G1" 1 )} 
-wvCut -win $_nWave3
-wvSetPosition -win $_nWave3 {("G3" 0)}
-wvSetPosition -win $_nWave3 {("G2" 16)}
-wvSelectGroup -win $_nWave3 {G1}
-wvSelectSignal -win $_nWave3 {( "G2" 6 )} 
-wvSetCursor -win $_nWave3 33.463393 -snap {("G2" 5)}
-wvZoom -win $_nWave3 0.000000 283.819151
-wvSetCursor -win $_nWave3 33.624097 -snap {("G2" 7)}
-wvSetCursor -win $_nWave3 13.502590 -snap {("G2" 8)}
-wvSetCursor -win $_nWave3 29.123234 -snap {("G2" 10)}
-wvSetCursor -win $_nWave3 29.387990 -snap {("G2" 13)}
-wvSetCursor -win $_nWave3 29.123234 -snap {("G2" 7)}
-wvSetCursor -win $_nWave3 75.455651 -snap {("G2" 6)}
-wvSetCursor -win $_nWave3 75.455651 -snap {("G2" 2)}
-wvSetCursor -win $_nWave3 77.044191 -snap {("G2" 5)}
-wvSelectSignal -win $_nWave3 {( "G2" 5 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 6 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 5 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 6 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 9 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 8 9 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 7 8 9 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 13 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 13 14 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 13 14 15 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 13 14 15 16 )} 
-wvCut -win $_nWave3
-wvSetPosition -win $_nWave3 {("G2" 12)}
-wvSelectSignal -win $_nWave3 {( "G2" 1 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 1 2 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 1 2 3 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 1 2 3 4 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 3 4 5 6 7 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 4 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 1 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 1 2 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 1 2 3 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 1 2 3 4 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 3 4 5 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 2 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 1 2 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 1 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 1 2 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 1 2 3 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 1 2 3 4 )} 
-wvSetPosition -win $_nWave3 {("G2" 3)}
-wvSetPosition -win $_nWave3 {("G2" 5)}
-wvSetPosition -win $_nWave3 {("G2" 6)}
-wvSetPosition -win $_nWave3 {("G2" 7)}
-wvSetPosition -win $_nWave3 {("G2" 6)}
-wvSetPosition -win $_nWave3 {("G2" 5)}
-wvSetPosition -win $_nWave3 {("G2" 4)}
-wvMoveSelected -win $_nWave3
-wvSetPosition -win $_nWave3 {("G2" 4)}
-wvSetPosition -win $_nWave3 {("G2" 1)}
-wvSetPosition -win $_nWave3 {("G2" 2)}
-wvSetPosition -win $_nWave3 {("G2" 3)}
-wvSetPosition -win $_nWave3 {("G2" 4)}
-wvSetPosition -win $_nWave3 {("G2" 5)}
-wvSetPosition -win $_nWave3 {("G2" 6)}
-wvSetPosition -win $_nWave3 {("G2" 7)}
-wvSetPosition -win $_nWave3 {("G2" 6)}
-wvSetPosition -win $_nWave3 {("G2" 5)}
-wvSetPosition -win $_nWave3 {("G2" 6)}
-wvSetPosition -win $_nWave3 {("G2" 7)}
-wvSetPosition -win $_nWave3 {("G2" 8)}
-wvSetPosition -win $_nWave3 {("G2" 7)}
-wvSetPosition -win $_nWave3 {("G2" 6)}
-wvSetPosition -win $_nWave3 {("G2" 5)}
-wvSetPosition -win $_nWave3 {("G2" 6)}
-wvMoveSelected -win $_nWave3
-wvSetPosition -win $_nWave3 {("G2" 6)}
-wvSetCursor -win $_nWave3 82.339325 -snap {("G2" 10)}
-wvSetCursor -win $_nWave3 72.808084 -snap {("G2" 4)}
-wvSelectSignal -win $_nWave3 {( "G2" 2 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 5 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 6 )} 
-wvSetCursor -win $_nWave3 79.956515 -snap {("G2" 9)}
-wvSelectSignal -win $_nWave3 {( "G2" 8 )} 
-wvSelectAll -win $_nWave3
-wvSelectSignal -win $_nWave3 {( "G2" 8 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 7 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 10 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 1 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 8 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 10 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 9 )} 
-wvSetCursor -win $_nWave3 74.926138 -snap {("G2" 9)}
-wvSetCursor -win $_nWave3 77.308948 -snap {("G2" 9)}
-wvSelectSignal -win $_nWave3 {( "G2" 12 )} 
-wvSelectAll -win $_nWave3
-wvSelectGroup -win $_nWave3 {G3}
-wvSelectSignal -win $_nWave3 {( "G2" 12 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 11 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 10 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 2 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 1 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 7 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 8 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 9 )} 
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "suba\[SUBA_WIDTH-1:0\]" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "dinb_q\[DINB_WIDTH-1:0\]" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "dinb_q\[DINB_WIDTH-1:0\]" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "suba\[SUBA_WIDTH-1:0\]" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "dinb_q\[DINB_WIDTH-1:0\]" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "product_c\[PRODUCT_C_WIDTH-1:0\]" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "product_c\[PRODUCT_C_WIDTH-1:0\]" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "product_c\[PRODUCT_C_WIDTH-1:0\]" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-wvDisplayGridCount -win $_nWave3 -off
-wvGetSignalClose -win $_nWave3
-wvConvertFile -win $_nWave3 -o \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb" \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump"
-wvReloadFile -win $_nWave3
-wvSetCursor -win $_nWave3 76.249921 -snap {("G2" 2)}
-wvSetCursor -win $_nWave3 74.661381 -snap {("G2" 2)}
-wvSetCursor -win $_nWave3 65.394898 -snap {("G2" 2)}
-wvSetCursor -win $_nWave3 73.072841 -snap {("G2" 2)}
-wvSelectSignal -win $_nWave3 {( "G2" 10 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 11 )} 
-debReload
-wvSelectSignal -win $_nWave3 {( "G2" 10 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 11 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 12 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 12 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 10 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 11 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 12 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 10 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 1 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 2 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 1 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 1 2 )} 
-wvSetPosition -win $_nWave3 {("G2" 2)}
-wvSetPosition -win $_nWave3 {("G2" 3)}
-wvSetPosition -win $_nWave3 {("G2" 4)}
-wvSetPosition -win $_nWave3 {("G2" 5)}
-wvSetPosition -win $_nWave3 {("G2" 6)}
-wvSetPosition -win $_nWave3 {("G2" 7)}
-wvSetPosition -win $_nWave3 {("G2" 8)}
-wvSetPosition -win $_nWave3 {("G2" 9)}
-wvSetPosition -win $_nWave3 {("G2" 10)}
-wvSetPosition -win $_nWave3 {("G2" 11)}
-wvSetPosition -win $_nWave3 {("G2" 12)}
-wvSetPosition -win $_nWave3 {("G3" 0)}
-wvSetPosition -win $_nWave3 {("G2" 12)}
-wvMoveSelected -win $_nWave3
-wvSetPosition -win $_nWave3 {("G2" 12)}
-wvSelectSignal -win $_nWave3 {( "G2" 11 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 11 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 12 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 8 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 10 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 7 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 8 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 7 )} 
-wvSetCursor -win $_nWave3 65.924411 -snap {("G3" 0)}
-wvDisplayGridCount -win $_nWave3 -off
-wvGetSignalClose -win $_nWave3
-wvConvertFile -win $_nWave3 -o \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb" \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump"
-wvReloadFile -win $_nWave3
-debReload
-wvSetCursor -win $_nWave3 35.742151 -snap {("G2" 11)}
-wvDisplayGridCount -win $_nWave3 -off
-wvGetSignalClose -win $_nWave3
-wvConvertFile -win $_nWave3 -o \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb" \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump"
-wvReloadFile -win $_nWave3
-wvDisplayGridCount -win $_nWave3 -off
-wvGetSignalClose -win $_nWave3
-wvConvertFile -win $_nWave3 -o \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb" \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump"
-wvReloadFile -win $_nWave3
-wvDisplayGridCount -win $_nWave3 -off
-wvGetSignalClose -win $_nWave3
-wvConvertFile -win $_nWave3 -o \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb" \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump"
-wvReloadFile -win $_nWave3
-wvSelectSignal -win $_nWave3 {( "G2" 7 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 6 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 7 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 7 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 6 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 7 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 6 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 7 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 6 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 7 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 7 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 10 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 9 )} 
-wvSelectAll -win $_nWave3
-wvCut -win $_nWave3
-wvSetPosition -win $_nWave3 {("G2" 0)}
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {23 29 1 1 1 1} -backward
-srcAddSelectedToWave -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {34 40 1 1 1 1} -backward
-srcAddSelectedToWave -win $_nTrace1
-wvSelectSignal -win $_nWave3 {( "G2" 9 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 8 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 9 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 10 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 9 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 10 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 11 )} 
-wvResizeWindow -win $_nWave3 0 25 1366 692
-wvSelectSignal -win $_nWave3 {( "G2" 10 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 11 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 10 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 11 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 10 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 11 )} 
-wvZoom -win $_nWave3 46.609539 59.321231
-wvSetCursor -win $_nWave3 49.965522 -snap {("G2" 10)}
-wvZoom -win $_nWave3 49.844803 50.448397
-wvSetCursor -win $_nWave3 50.238915 -snap {("G3" 0)}
-wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomIn -win $_nWave3
-wvZoomIn -win $_nWave3
-wvZoomIn -win $_nWave3
-wvZoomIn -win $_nWave3
-srcDeselectAll -win $_nTrace1
-wvSetCursor -win $_nWave3 57.264957 -snap {("G3" 0)}
-wvDisplayGridCount -win $_nWave3 -off
-wvGetSignalClose -win $_nWave3
-wvConvertFile -win $_nWave3 -o \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb" \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump"
-wvReloadFile -win $_nWave3
-wvSelectSignal -win $_nWave3 {( "G2" 8 )} 
-srcHBSelect "tb_complex_mult.u_complex_mult.u0_signed_mult" -win $_nTrace1
-srcSetScope -win $_nTrace1 "tb_complex_mult.u_complex_mult.u0_signed_mult" -delim \
-           "."
-srcHBSelect "tb_complex_mult.u_complex_mult.u2_signed_mult" -win $_nTrace1
-srcSetScope -win $_nTrace1 "tb_complex_mult.u_complex_mult.u2_signed_mult" -delim \
-           "."
-srcHBSelect "tb_complex_mult.u_complex_mult.u2_signed_mult" -win $_nTrace1
-srcSetScope -win $_nTrace1 "tb_complex_mult.u_complex_mult.u2_signed_mult" -delim \
-           "."
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {12 16 2 1 2 1} -backward
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {16 17 1 1 1 1} -backward
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {16 17 1 1 1 1} -backward
-srcAddSelectedToWave -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-wvSelectSignal -win $_nWave3 {( "G2" 13 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 12 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 12 13 14 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 13 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 12 )} 
-wvSetPosition -win $_nWave3 {("G2" 12)}
-wvSetPosition -win $_nWave3 {("G2" 13)}
-wvSetPosition -win $_nWave3 {("G2" 14)}
-wvSetPosition -win $_nWave3 {("G3" 0)}
-wvSetPosition -win $_nWave3 {("G2" 14)}
-wvMoveSelected -win $_nWave3
-wvSetPosition -win $_nWave3 {("G2" 14)}
-wvSelectSignal -win $_nWave3 {( "G2" 12 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 9 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 12 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 13 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 12 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 13 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 12 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 12 13 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 12 13 14 )} 
-wvSetPosition -win $_nWave3 {("G2" 13)}
-wvSetPosition -win $_nWave3 {("G2" 14)}
-wvSetPosition -win $_nWave3 {("G2" 13)}
-wvSetPosition -win $_nWave3 {("G2" 12)}
-wvSetPosition -win $_nWave3 {("G2" 11)}
-wvSetPosition -win $_nWave3 {("G2" 10)}
-wvSetPosition -win $_nWave3 {("G2" 9)}
-wvSetPosition -win $_nWave3 {("G2" 8)}
-wvSetPosition -win $_nWave3 {("G2" 9)}
-wvSetPosition -win $_nWave3 {("G2" 10)}
-wvSetPosition -win $_nWave3 {("G2" 11)}
-wvSetPosition -win $_nWave3 {("G2" 12)}
-wvSetPosition -win $_nWave3 {("G2" 13)}
-wvSetPosition -win $_nWave3 {("G2" 14)}
-wvSetPosition -win $_nWave3 {("G3" 0)}
-wvMoveSelected -win $_nWave3
-wvSetPosition -win $_nWave3 {("G3" 3)}
-wvSetPosition -win $_nWave3 {("G3" 3)}
-wvSetCursor -win $_nWave3 39.316239 -snap {("G3" 2)}
-wvSetCursor -win $_nWave3 99.145299 -snap {("G3" 1)}
-wvSelectSignal -win $_nWave3 {( "G3" 1 )} 
-wvSelectSignal -win $_nWave3 {( "G3" 2 )} 
-wvSelectSignal -win $_nWave3 {( "G3" 2 )} 
-wvSetCursor -win $_nWave3 134.615385 -snap {("G3" 2)}
-wvSelectSignal -win $_nWave3 {( "G3" 3 )} 
-wvSelectSignal -win $_nWave3 {( "G3" 2 )} 
-wvSelectSignal -win $_nWave3 {( "G3" 1 )} 
-wvSelectSignal -win $_nWave3 {( "G3" 3 )} 
-srcHBSelect "tb_complex_mult.u_complex_mult.u1_signed_mult" -win $_nTrace1
-srcHBSelect "tb_complex_mult.u_complex_mult.u2_signed_mult" -win $_nTrace1
-srcHBSelect "tb_complex_mult.u_complex_mult.u1_signed_mult" -win $_nTrace1
-srcHBSelect "tb_complex_mult.u_complex_mult" -win $_nTrace1
-srcSetScope -win $_nTrace1 "tb_complex_mult.u_complex_mult" -delim "."
-srcHBSelect "tb_complex_mult" -win $_nTrace1
-srcSetScope -win $_nTrace1 "tb_complex_mult" -delim "."
-verdiWindowResize -win $_Verdi_1 "0" "25" "1366" "546"
-wvResizeWindow -win $_nWave3 0 25 1366 546
-verdiWindowResize -win $_Verdi_1 "0" "25" "1280" "580"
-wvResizeWindow -win $_nWave3 0 25 1280 580
-verdiWindowResize -win $_Verdi_1 "0" "25" "1280" "530"
-wvResizeWindow -win $_nWave3 0 25 1280 530
-verdiWindowResize -win $_Verdi_1 "0" "25" "1366" "546"
-verdiWindowResize -win $_Verdi_1 "0" "25" "1366" "530"
-verdiWindowResize -win $_Verdi_1 "0" "25" "1366" "546"
-wvResizeWindow -win $_nWave3 0 25 1366 546
-verdiWindowResize -win $_Verdi_1 "0" "25" "1366" "692"
-wvResizeWindow -win $_nWave3 0 25 1366 692
-wvDisplayGridCount -win $_nWave3 -off
-wvGetSignalClose -win $_nWave3
-wvConvertFile -win $_nWave3 -o \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb" \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump"
-wvReloadFile -win $_nWave3
-wvDisplayGridCount -win $_nWave3 -off
-wvGetSignalClose -win $_nWave3
-wvConvertFile -win $_nWave3 -o \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb" \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump"
-wvReloadFile -win $_nWave3
-wvDisplayGridCount -win $_nWave3 -off
-wvGetSignalClose -win $_nWave3
-wvConvertFile -win $_nWave3 -o \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb" \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump"
-wvReloadFile -win $_nWave3
-wvDisplayGridCount -win $_nWave3 -off
-wvGetSignalClose -win $_nWave3
-wvConvertFile -win $_nWave3 -o \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb" \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump"
-wvReloadFile -win $_nWave3
-wvDisplayGridCount -win $_nWave3 -off
-wvGetSignalClose -win $_nWave3
-wvConvertFile -win $_nWave3 -o \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb" \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump"
-wvReloadFile -win $_nWave3
-wvDisplayGridCount -win $_nWave3 -off
-wvGetSignalClose -win $_nWave3
-wvConvertFile -win $_nWave3 -o \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb" \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump"
-wvReloadFile -win $_nWave3
-wvDisplayGridCount -win $_nWave3 -off
-wvGetSignalClose -win $_nWave3
-wvConvertFile -win $_nWave3 -o \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb" \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump"
-wvReloadFile -win $_nWave3
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-debReload
-wvDisplayGridCount -win $_nWave3 -off
-wvGetSignalClose -win $_nWave3
-wvConvertFile -win $_nWave3 -o \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb" \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump"
-wvReloadFile -win $_nWave3
-wvSetCursor -win $_nWave3 5.128205 -snap {("G2" 6)}
-wvSelectSignal -win $_nWave3 {( "G2" 5 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 7 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 9 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 6 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 4 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 10 )} 
-wvSelectGroup -win $_nWave3 {G3}
-wvSelectGroup -win $_nWave3 {G3}
-wvSelectSignal -win $_nWave3 {( "G3" 1 )} 
-wvSelectSignal -win $_nWave3 {( "G3" 2 )} 
-wvSelectSignal -win $_nWave3 {( "G3" 3 )} 
-wvSelectSignal -win $_nWave3 {( "G3" 2 )} 
-wvSetCursor -win $_nWave3 17.094017 -snap {("G4" 0)}
-srcHBSelect "tb_complex_mult.u_complex_mult" -win $_nTrace1
-srcSetScope -win $_nTrace1 "tb_complex_mult.u_complex_mult" -delim "."
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "DINB_WIDTH" -win $_nTrace1
-srcAction -pos 8 2 5 -win $_nTrace1 -name "DINB_WIDTH" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "DINB_WIDTH" -win $_nTrace1
-srcAction -pos 8 2 5 -win $_nTrace1 -name "DINB_WIDTH" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "DINB_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "DINA_WIDTH" -win $_nTrace1
-srcAction -pos 7 2 5 -win $_nTrace1 -name "DINA_WIDTH" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "DINB_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "SUMA_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "SUMB_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "SUMB_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "SUMA_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "DINB_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "SUMA_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "DINB_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "DINA_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "DINA_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "SUMA_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "SUMB_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "SUBA_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "DINA_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "SUBA_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "MULT_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "MID_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "MULT_WIDTH" -win $_nTrace1
-wvSelectSignal -win $_nWave3 {( "G2" 6 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 6 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 6 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 7 )} 
-wvSelectSignal -win $_nWave3 {( "G2" 6 )} 
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "sumb\[SUMB_WIDTH - 1:0\]" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "sumb\[SUMB_WIDTH - 1:0\]" -win $_nTrace1
-srcAction -pos 40 2 1 -win $_nTrace1 -name "sumb\[SUMB_WIDTH - 1:0\]" -ctrlKey \
-          off
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "sumb\[SUMB_WIDTH - 1:0\]" -win $_nTrace1
-srcAction -pos 40 2 2 -win $_nTrace1 -name "sumb\[SUMB_WIDTH - 1:0\]" -ctrlKey \
-          off
-srcTraceLoad "tb_complex_mult.u_complex_mult.sumb\[8:0\]" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "C_WIDTH" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "multb" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "multa" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "product" -win $_nTrace1
-srcBackwardHistory -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "product_a" -win $_nTrace1
-verdiWindowResize -win $_Verdi_1 "0" "25" "1366" "546"
-wvResizeWindow -win $_nWave3 0 25 1366 546
-verdiWindowResize -win $_Verdi_1 "0" "25" "1280" "530"
-wvResizeWindow -win $_nWave3 0 25 1280 530
-verdiWindowResize -win $_Verdi_1 "0" "25" "1366" "546"
-wvResizeWindow -win $_nWave3 0 25 1366 546
-verdiWindowResize -win $_Verdi_1 "0" "25" "1366" "692"
-wvResizeWindow -win $_nWave3 0 25 1366 692
-wvDisplayGridCount -win $_nWave3 -off
-wvGetSignalClose -win $_nWave3
-wvConvertFile -win $_nWave3 -o \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump.fsdb" \
-           "/home/IC/ic_study/ip_lib/work/tb_complex_mult.dump"
-wvReloadFile -win $_nWave3
-wvUnknownSaveResult -win $_nWave3 -clear
-wvSelectSignal -win $_nWave3 {( "G2" 7 )} 
-srcDeselectAll -win $_nTrace1
-debReload
-srcDeselectAll -win $_nTrace1
-verdiWindowResize -win $_Verdi_1 "0" "25" "1280" "530"
-wvResizeWindow -win $_nWave3 0 25 1280 530
-verdiWindowResize -win $_Verdi_1 "0" "25" "1366" "546"
-wvResizeWindow -win $_nWave3 0 25 1366 546
-verdiWindowResize -win $_Verdi_1 "0" "25" "1280" "530"
-wvResizeWindow -win $_nWave3 0 25 1280 530
-verdiWindowResize -win $_Verdi_1 "0" "25" "1366" "692"
-wvResizeWindow -win $_nWave3 0 25 1366 692
-wvTpfCloseForm -win $_nWave3
-wvGetSignalClose -win $_nWave3
-wvCloseWindow -win $_nWave3
+wvSetCursor -win $_nWave2 1229.684116 -snap {("G2" 12)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSetCursor -win $_nWave2 3706.371841 -snap {("G2" 12)}
+wvZoomIn -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G2" 21 )} 
+wvSetCursor -win $_nWave2 3523.916968 -snap {("G2" 17)}
+wvSetCursor -win $_nWave2 2700.812274 -snap {("G2" 14)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 0.000000 1772.361613
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G2" 13 )} 
+wvResizeWindow -win $_nWave2 -2 25 1920 1004
+wvResizeWindow -win $_nWave2 -2 25 1920 1004
+wvSelectSignal -win $_nWave2 {( "G2" 9 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 13 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 13 14 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 13 14 15 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 13 14 15 16 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 13 14 15 16 17 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 13 14 15 16 17 18 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 13 14 15 16 17 18 19 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 13 14 15 16 17 18 19 20 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 13 14 15 16 17 18 19 20 21 )} \
+           
+wvSelectSignal -win $_nWave2 {( "G2" 15 16 17 18 19 20 21 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 10 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 13 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 13 14 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 13 14 15 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 13 14 15 16 17 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 13 14 15 16 17 18 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 13 14 15 16 17 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 13 14 15 16 17 18 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 13 14 15 16 17 18 19 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 13 14 15 16 17 18 19 20 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 9 10 11 12 13 14 15 16 17 18 19 20 21 )} \
+           
+wvSetPosition -win $_nWave2 {("G2" 13)}
+wvSetPosition -win $_nWave2 {("G2" 14)}
+wvSetPosition -win $_nWave2 {("G2" 15)}
+wvSetPosition -win $_nWave2 {("G2" 16)}
+wvSetPosition -win $_nWave2 {("G2" 17)}
+wvSetPosition -win $_nWave2 {("G2" 18)}
+wvSetPosition -win $_nWave2 {("G2" 19)}
+wvSetPosition -win $_nWave2 {("G2" 20)}
+wvSetPosition -win $_nWave2 {("G2" 21)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G4" 0)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G3" 13)}
+wvSetCursor -win $_nWave2 611.994352 -snap {("G3" 5)}
+wvSelectSignal -win $_nWave2 {( "G3" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G3" 1 )} 
+wvSelectGroup -win $_nWave2 {G3}
+wvSetCursor -win $_nWave2 75.055911 -snap {("G3" 5)}
+wvSetCursor -win $_nWave2 1703.191830 -snap {("G3" 7)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G3" 8 )} 
+wvSelectSignal -win $_nWave2 {( "G3" 9 )} 
+wvSelectSignal -win $_nWave2 {( "G3" 10 )} 
+wvSelectSignal -win $_nWave2 {( "G3" 10 )} 
+wvSelectSignal -win $_nWave2 {( "G3" 9 )} 
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G3" 9 10 )} 
+wvSelectSignal -win $_nWave2 {( "G3" 11 )} 
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G3" 4 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 7 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 6 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 7 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 8 )} 
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G2" 7 )} 
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvConvertFile -win $_nWave2 -o \
+           "/home/IC/Digital_Front_End_Verilog/ip_lib/work/tb_ram.dump.fsdb" \
+           "/home/IC/Digital_Front_End_Verilog/ip_lib/work/tb_ram.dump"
+wvReloadFile -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G2" 6 )} 
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G1" 2 )} 
+wvSetCursor -win $_nWave2 1679.560872 -snap {("G1" 4)}
+wvSetCursor -win $_nWave2 2719.842520 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 4190.184737 -snap {("G3" 6)}
+wvSetCursor -win $_nWave2 2748.900666 -snap {("G3" 6)}
+wvSetCursor -win $_nWave2 5358.322229 -snap {("G3" 9)}
+wvSetCursor -win $_nWave2 5329.264082 -snap {("G3" 9)}
+wvSelectSignal -win $_nWave2 {( "G1" 2 )} {( "G3" 10 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 2 )} {( "G3" 10 11 )} 
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
+wvSetCursor -win $_nWave2 5305.916869 -snap {("G3" 11)}
+wvSetCursor -win $_nWave2 5298.724258 -snap {("G3" 9)}
+wvSetCursor -win $_nWave2 5305.197608 -snap {("G3" 11)}
+wvSetCursor -win $_nWave2 5299.443519 -snap {("G3" 9)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G3" 5 )} 
+wvSelectSignal -win $_nWave2 {( "G3" 5 6 )} 
+wvSelectSignal -win $_nWave2 {( "G3" 5 6 7 )} 
+wvSelectSignal -win $_nWave2 {( "G3" 5 6 7 8 )} 
+wvSelectSignal -win $_nWave2 {( "G3" 8 )} 
+wvSetCursor -win $_nWave2 2708.219261 -snap {("G3" 8)}
+wvSelectSignal -win $_nWave2 {( "G3" 9 )} 
+wvSelectSignal -win $_nWave2 {( "G3" 10 )} 
+wvSelectSignal -win $_nWave2 {( "G3" 12 )} 
+wvSetCursor -win $_nWave2 7932.874016 -snap {("G3" 12)}
+wvSetCursor -win $_nWave2 7886.380981 -snap {("G3" 10)}
+wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2

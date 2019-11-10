@@ -1,3 +1,4 @@
-/home/IC/Digital_Front_End_Verilog/ip_lib/rtl/complex_mult.v
-/home/IC/Digital_Front_End_Verilog/ip_lib/rtl/signed_mult.v
-/home/IC/Digital_Front_End_Verilog/ip_lib/sim/tb_complex_mult.v
+/home/IC/Digital_Front_End_Verilog/ip_lib/rtl/dp_sram.v
+/home/IC/Digital_Front_End_Verilog/ip_lib/rtl/sram.v
+/home/IC/Digital_Front_End_Verilog/ip_lib/rtl/ture_dp_sram.v
+/home/IC/Digital_Front_End_Verilog/ip_lib/sim/tb_ram.v
