@@ -32,7 +32,7 @@ fHsimTaskFuncXmrsDbg               	0
 fHsimAllTaskFuncXmrs               	0
 fHsimDoXmrProcessing               	1
 fNoMergeDelays                     	0
-uGlblTimeUnit                      	16
+uGlblTimeUnit                      	7
 fHsimAllMtm                        	0
 fSimprofileNew                     	0
 fHsimVhVlOpt                       	0

@@ -5,5 +5,5 @@ PYTHONPATH=/opt/Synopsys/VCS2014/linux/lib/pylib27
 export PYTHONPATH
 LD_LIBRARY_PATH=/opt/Synopsys/VCS2014/linux/lib:/opt/Synopsys/VCS2014/linux/lib/pylib27
 export LD_LIBRARY_PATH
-/opt/Synopsys/VCS2014/linux/bin/vcsfind_create_index.exe  -z  simv.daidir/debug_dump/fsearch/idents_RSpMzt.xml.gz  -o simv.daidir/debug_dump/fsearch/fsearch.db_tmp
+/opt/Synopsys/VCS2014/linux/bin/vcsfind_create_index.exe  -z  simv.daidir/debug_dump/fsearch/idents_NkuRnU.xml.gz  -o simv.daidir/debug_dump/fsearch/fsearch.db_tmp
 \mv simv.daidir/debug_dump/fsearch/fsearch.db_tmp simv.daidir/debug_dump/fsearch/fsearch.db

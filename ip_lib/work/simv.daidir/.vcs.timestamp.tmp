@@ -26,7 +26,7 @@
 -debug=4
 -debug_all
 -debug_obj
--f ../vc/ram.f
+-f ../vc/dds.f
 -gen_obj
 -line
 -picarchive
@@ -34,8 +34,8 @@
 75
 sysc_uni_pwd=/home/IC/Digital_Front_End_Verilog/ip_lib/work
 XMODIFIERS=@im=none
-XDG_SESSION_COOKIE=a0bfd28e837df0a07240a6770000000b-1573262284.504446-325444659
-XAUTHORITY=/var/run/gdm/auth-for-IC-x9YOvN/database
+XDG_SESSION_COOKIE=a0bfd28e837df0a07240a6770000000b-1573390572.498407-1069654161
+XAUTHORITY=/var/run/gdm/auth-for-IC-ww15Ez/database
 WINDOWPATH=1
 Virtuoso_HOME=/opt/Cadence/IC617
 Verdi_HOME=/opt/Synopsys/Verdi2015
@@ -52,10 +52,10 @@ TOOL_HOME=/opt/Synopsys/VCS2014/linux
 Synplify_HOME=/opt/Synopsys/Synplify2015
 Synopsys_Dir=/opt/Synopsys
 StarRC_HOME=/opt/Synopsys/StarRC2015
-SSH_AUTH_SOCK=/tmp/keyring-hzCy0x/socket.ssh
+SSH_AUTH_SOCK=/tmp/keyring-s9vOSv/socket.ssh
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
 SNPSLMD_LICENSE_FILE=/opt/Synopsys/License/License.dat:/opt/Synopsys/VCS2014/flexlm//license.dat
-SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/3573,unix/unix:/tmp/.ICE-unix/3573
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/3564,unix/unix:/tmp/.ICE-unix/3564
 SCRNAME=vcs
 SCRIPT_NAME=vcs
 SCL_HOME=/opt/Synopsys/SCL11.11
@@ -84,8 +84,8 @@ Hspice_HOME=/opt/Synopsys/Hspice2016
 HISTCONTROL=ignoredups
 G_BROKEN_FILENAMES=1
 GTK_RC_FILES=/etc/gtk/gtkrc:/home/IC/.gtkrc-1.2-gnome2
-GNOME_KEYRING_SOCKET=/tmp/keyring-hzCy0x/socket
-GNOME_KEYRING_PID=3563
+GNOME_KEYRING_SOCKET=/tmp/keyring-s9vOSv/socket
+GNOME_KEYRING_PID=3554
 GNOME_DESKTOP_SESSION_ID=this-is-deprecated
 GDM_LANG=en_US.UTF-8
 GDM_KEYBOARD_LAYOUT=us
@@ -94,7 +94,7 @@ Formality_HOME=/opt/Synopsys/Formality2016
 Encounter_HOME=/opt/Cadence/INNOVUS15
 DFT_HOME=/opt/Mentor/Tessent2013/
 DESKTOP_SESSION=gnome
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-TuUTCgYBba,guid=6212aa8c1d6feb879497440400000045
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-WHipFHBAAJ,guid=a9a07bdff471c3ef8837e91600000061
 Concept_dir=/opt/Concept
 Cadence_Dir=/opt/Cadence
 CVS_RSH=ssh
@@ -108,12 +108,11 @@ CALIBRE_2013_4_ALLOW_IXL_ON_RHEL6=101010
 AGILEESOFD_LICENSE_FILE=/opt/KeySight/ADS2015/License/license.lic
 ADS_HOME=/opt/KeySight/ADS2015
 0
-6
-1573265393 ../rtl/ture_dp_sram.v
-1573271730 ../rtl/dp_sram.v
-1573265124 ../rtl/sram.v
-1573266352 ../sim/tb_ram.v
-1573265086 ../vc/ram.f
+5
+1573392663 ../rtl/DDS/single_port_rom.v
+1573391670 ../rtl/DDS/dds_top.v
+1573391763 ../sim/tb_dds_top.v
+1573387269 ../vc/dds.f
 1393560725 /opt/Synopsys/VCS2014/linux/lib/vcsd.tab
 4
 0 

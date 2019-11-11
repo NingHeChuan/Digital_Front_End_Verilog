@@ -1,4 +1,3 @@
-/home/IC/Digital_Front_End_Verilog/ip_lib/rtl/dp_sram.v
-/home/IC/Digital_Front_End_Verilog/ip_lib/rtl/sram.v
-/home/IC/Digital_Front_End_Verilog/ip_lib/rtl/ture_dp_sram.v
-/home/IC/Digital_Front_End_Verilog/ip_lib/sim/tb_ram.v
+/home/IC/Digital_Front_End_Verilog/ip_lib/rtl/DDS/dds_top.v
+/home/IC/Digital_Front_End_Verilog/ip_lib/rtl/DDS/single_port_rom.v
+/home/IC/Digital_Front_End_Verilog/ip_lib/sim/tb_dds_top.v
