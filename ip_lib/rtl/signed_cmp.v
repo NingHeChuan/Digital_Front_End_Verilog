@@ -49,10 +49,10 @@ if(dat_op0[4] != dat_op1[4])begin
     cmp_flag = dat_op0;
 end
 else begin
-    cmp_flag = (dat_op0[4])? ((-dat_op0) > (-dat_op1)): (dat_op0 < dat_op1);
+    cmp_flag = (dat_op0[4])? ((-dat_op0[4:0]) > (-dat_op1[4:0])): (dat_op0[4:0] < dat_op1[4:0]);
 end
 
-//assign max_op[4:0] = cmp_flag? dat_op1: dat_op0;
+max_op[4:0] = cmp_flag? dat_op1[4:0]: dat_op0[4:0];
 
 endfunction
 
