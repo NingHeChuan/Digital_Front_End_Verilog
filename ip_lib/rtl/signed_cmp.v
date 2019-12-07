@@ -40,27 +40,27 @@ endmodule
 
 module signed_cmp;
 
-function    [4:0] max_op;
-input   [4:0]   dat_op0;
-input   [4:0]   dat_op1;
+function    [DATA_WIDTH-1:0] max_op;
+input   [DATA_WIDTH-1:0]   dat_op0;
+input   [DATA_WIDTH-1:0]   dat_op1;
 
 reg    cmp_flag;
-if(dat_op0[4] != dat_op1[4])begin
+if(dat_op0[DATA_WIDTH-1] != dat_op1[DATA_WIDTH-1])begin
     cmp_flag = dat_op0;
 end
 else begin
-    cmp_flag = (dat_op0[4])? ((-dat_op0[4:0]) > (-dat_op1[4:0])): (dat_op0[4:0] < dat_op1[4:0]);
+    cmp_flag = (dat_op0[DATA_WIDTH-1])? ((-dat_op0[DATA_WIDTH-1:0]) > (-dat_op1[DATA_WIDTH-1:0])): (dat_op0[DATA_WIDTH-1:0] < dat_op1[DATA_WIDTH-1:0]);
 end
 
-max_op[4:0] = cmp_flag? dat_op1[4:0]: dat_op0[4:0];
+max_op[DATA_WIDTH-1:0] = cmp_flag? dat_op1[DATA_WIDTH-1:0]: dat_op0[DATA_WIDTH-1:0];
 
 endfunction
 
 
-function [4:0] dat_abs;
-        input [4:0] dat_in;
+function [DATA_WIDTH-1:0] dat_abs;
+        input [DATA_WIDTH-1:0] dat_in;
 
-        assign dat_abs = (dat_in[4])? (-dat_in): dat_in;
+        assign dat_abs[DATA_WIDTH-1:0] = (dat_in[DATA_WIDTH-1])? (-dat_in): dat_in;
 
 endfunction
 
